@@ -1,0 +1,5 @@
+// OMDB Javascript
+
+function getResult() {
+
+}
