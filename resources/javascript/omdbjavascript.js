@@ -9,11 +9,15 @@ function getResult() {
 
         console.log(response.Search);
 
+        let template = null;
         let len = response.Search.length;
         for (var i = 0; i < len; i++) {
-            console.log(response.Search[i].Title);
-            console.log(response.Search[i].Year);
-            console.log(response.Search[i].Type);
+
+            template = '<tr><td>' + response.Search[i].Title
+                + '</td><td>' + response.Search[i].Year
+                + '</td><td>' + response.Search[i].Type
+                + '</tr>'
+            $('table').append(template);
         }
 
     }
